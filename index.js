@@ -104,7 +104,7 @@ function endGame() {
   window.removeEventListener('keydown', moveDodger)
   alert('YOU LOSE!')
 
-  START.innerHTML = `${ROCK_COUNT} rocks avoided.\n Play again?`
+  START.innerHTML = `${ROCK_COUNT} rocks avoided.<br> Play again?`
   START.style.display = 'inline'
 }
 
