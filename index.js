@@ -11,6 +11,7 @@ const ROCKS = []
 const START = document.getElementById('start')
 const DODGER_VELOCITY = 1
 const ROCK_VELOCITY = 2
+var ROCK_COUNT = 0
 
 var gameInterval = null
 
@@ -72,6 +73,7 @@ function createRock(x) {
        window.requestAnimationFrame(moveRock)
      }
      else {
+       ROCK_COUNT++;
        rock.remove();
      }
   }
@@ -102,7 +104,7 @@ function endGame() {
   window.removeEventListener('keydown', moveDodger)
   alert('YOU LOSE!')
 
-  START.innerHTML = "Play Again?"
+  START.innerHTML = `${ROCK_COUNT} rocks avoided. Play again?`
   START.style.display = 'inline'
 }
 
